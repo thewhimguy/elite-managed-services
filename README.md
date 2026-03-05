@@ -11,3 +11,5 @@ Exported from Caffeine project: Elite Managed Services
 ### Installation
 ```bash
 pnpm install
+pnpm dev
+./build.sh
