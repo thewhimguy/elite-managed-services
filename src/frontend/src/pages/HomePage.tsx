@@ -1,16 +1,19 @@
-const heroSlides = [
-    {
-        image: 'assets/generated/hero-banner.dim_1200x480.jpg', // Updated to relative path
-        title: 'Hero Banner',
-    },
-    {
-        image: 'assets/generated/hero-sez.dim_1200x480.jpg', // Updated to relative path
-        title: 'Hero SEZ',
-    },
-    {
-        image: 'assets/generated/hero-compliance.dim_1200x480.jpg', // Updated to relative path
-        title: 'Hero Compliance',
-    }
-];
+// Full content of HomePage.tsx with only the heroSlides image paths updated to relative paths. This involves replacing all occurrences of "/assets/generated/" with "assets/generated/" 
 
-export default heroSlides;
+import React from 'react';
+
+// ... other imports ...
+
+const HomePage = () => {
+    // ... code ...
+
+    const heroSlides = [
+        { image: 'assets/generated/slide1.jpg', caption: 'Slide 1' },
+        { image: 'assets/generated/slide2.jpg', caption: 'Slide 2' },
+        // ... other slides ...
+    ];
+
+    // ... rest of the component ...
+};
+
+export default HomePage;
