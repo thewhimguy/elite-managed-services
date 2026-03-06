@@ -2,8 +2,9 @@ module.exports = {
   theme: {
     extend: {
       fontFamily: {
-        sans: ['Inter', 'sans-serif'], // Changed from Cabinet Grotesk to Inter
-      }
+  sans: ["Inter", "ui-sans-serif", "system-ui", "sans-serif"],
+  display: ["Inter", "ui-sans-serif", "system-ui", "sans-serif"],
+}
     }
   }
 };
