@@ -1,11 +1,12 @@
 import { ServicePage } from "./ServicePage";
+import { assetPath } from "@/utils/paths";
 
 export function SezServicesPage() {
   return (
     <ServicePage
       title="SEZ Services"
       subtitle="Comprehensive Special Economic Zone advisory, approval and compliance management."
-      bgImage="/assets/generated/hero-sez.dim_1200x480.jpg"
+      bgImage={assetPath("assets/generated/hero-sez.dim_1200x480.jpg")}
       description={
         <>
           <p>

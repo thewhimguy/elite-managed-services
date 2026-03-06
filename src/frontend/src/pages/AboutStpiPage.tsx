@@ -2,6 +2,7 @@ import { PageHero } from "@/components/PageHero";
 import { Card, CardContent } from "@/components/ui/card";
 import { CheckCircle2 } from "lucide-react";
 import { motion } from "motion/react";
+import { assetPath } from "@/utils/paths";
 
 const stpiBenefits = [
   "100% Foreign Direct Investment allowed through automatic route",
@@ -22,7 +23,7 @@ export function AboutStpiPage() {
       <PageHero
         title="About STPI Scheme"
         subtitle="Software Technology Parks of India — empowering IT/ITES exports since 1991."
-        bgImage="/assets/generated/hero-compliance.dim_1200x480.jpg"
+        bgImage={assetPath("assets/generated/hero-compliance.dim_1200x480.jpg")}
       />
 
       {/* Overview */}

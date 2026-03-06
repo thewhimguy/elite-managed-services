@@ -1,11 +1,12 @@
 import { ServicePage } from "./ServicePage";
+import { assetPath } from "@/utils/paths";
 
 export function PayrollServicesPage() {
   return (
     <ServicePage
       title="Payroll Services"
       subtitle="End-to-end payroll processing, statutory compliance and employee taxation management."
-      bgImage="/assets/generated/hero-banner.dim_1200x480.jpg"
+      bgImage={assetPath("assets/generated/hero-banner.dim_1200x480.jpg")}
       description={
         <>
           <p>

@@ -1,11 +1,12 @@
 import { ServicePage } from "./ServicePage";
+import { assetPath } from "@/utils/paths";
 
 export function StpiServicesPage() {
   return (
     <ServicePage
       title="STPI Services"
       subtitle="Expert guidance for Software Technology Park registration and ongoing compliance."
-      bgImage="/assets/generated/hero-compliance.dim_1200x480.jpg"
+      bgImage={assetPath("assets/generated/hero-compliance.dim_1200x480.jpg")}
       description={
         <>
           <p>

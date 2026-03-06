@@ -2,6 +2,7 @@ import { PageHero } from "@/components/PageHero";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { CheckCircle2 } from "lucide-react";
 import { motion } from "motion/react";
+import { assetPath } from "@/utils/paths";
 
 const developerBenefits = [
   "Exemption from customs/excise duty on import/procurement of goods for development, operation and maintenance of SEZ",
@@ -29,7 +30,7 @@ export function AboutSezPage() {
       <PageHero
         title="About SEZ"
         subtitle="Special Economic Zones — a gateway to tax incentives, simplified compliance and accelerated growth."
-        bgImage="/assets/generated/hero-sez.dim_1200x480.jpg"
+        bgImage={assetPath("assets/generated/hero-sez.dim_1200x480.jpg")}
       />
 
       {/* What is SEZ */}
