@@ -1,19 +1,19 @@
-// Full content of HomePage.tsx with only the heroSlides image paths updated to relative paths. This involves replacing all occurrences of "/assets/generated/" with "assets/generated/" 
+const heroSlides = [
+  {
+    image: "assets/generated/image1.jpg",
+    title: "Title 1",
+    description: "Description 1"
+  },
+  {
+    image: "assets/generated/image2.jpg",
+    title: "Title 2",
+    description: "Description 2"
+  },
+  {
+    image: "assets/generated/image3.jpg",
+    title: "Title 3",
+    description: "Description 3"
+  }
+];
 
-import React from 'react';
-
-// ... other imports ...
-
-const HomePage = () => {
-    // ... code ...
-
-    const heroSlides = [
-        { image: 'assets/generated/slide1.jpg', caption: 'Slide 1' },
-        { image: 'assets/generated/slide2.jpg', caption: 'Slide 2' },
-        // ... other slides ...
-    ];
-
-    // ... rest of the component ...
-};
-
-export default HomePage;
+export default heroSlides;
