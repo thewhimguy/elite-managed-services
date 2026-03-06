@@ -3,6 +3,7 @@ import { Link, useLocation } from "@tanstack/react-router";
 import { ChevronDown, Menu, X } from "lucide-react";
 import { AnimatePresence, motion } from "motion/react";
 import { useEffect, useRef, useState } from "react";
+import { assetPath } from '@/utils/paths';
 
 const aboutLinks = [
   { label: "About Us", to: "/about-us", ocid: "nav.about_us.link" },
