@@ -1,3 +1,6 @@
+const getAssetPath = (path: string) => {
+  return `${import.meta.env.BASE_URL}${path}`;
+}
 import { fileURLToPath, URL } from "url";
 import react from "@vitejs/plugin-react";
 import { defineConfig } from "vite";
