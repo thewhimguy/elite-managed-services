@@ -8,49 +8,20 @@
 
 import { IDL } from '@icp-sdk/core/candid';
 
-export const UserRole = IDL.Variant({
-  'admin' : IDL.Null,
-  'user' : IDL.Null,
-  'guest' : IDL.Null,
-});
-export const UserProfile = IDL.Record({ 'name' : IDL.Text });
-export const ServiceInterest = IDL.Variant({
-  'sezServices' : IDL.Null,
-  'gstRelated' : IDL.Null,
-  'dgft' : IDL.Null,
-  'stpi' : IDL.Null,
-  'hundredPercentEOU' : IDL.Null,
-  'incomeTaxReturn' : IDL.Null,
-  'labourLawCompliances' : IDL.Null,
-  'general' : IDL.Null,
-  'payrollServices' : IDL.Null,
-});
-export const Enquiry = IDL.Record({
-  'id' : IDL.Nat,
+export const Time = IDL.Int;
+export const Inquiry = IDL.Record({
   'name' : IDL.Text,
   'email' : IDL.Text,
-  'serviceInterest' : ServiceInterest,
   'message' : IDL.Text,
+  'timestamp' : Time,
   'phone' : IDL.Text,
 });
 
 export const idlService = IDL.Service({
-  '_initializeAccessControlWithSecret' : IDL.Func([IDL.Text], [], []),
-  'assignCallerUserRole' : IDL.Func([IDL.Principal, UserRole], [], []),
-  'deleteEnquiry' : IDL.Func([IDL.Nat], [], []),
-  'getCallerUserProfile' : IDL.Func([], [IDL.Opt(UserProfile)], ['query']),
-  'getCallerUserRole' : IDL.Func([], [UserRole], ['query']),
-  'getUserProfile' : IDL.Func(
-      [IDL.Principal],
-      [IDL.Opt(UserProfile)],
-      ['query'],
-    ),
-  'isCallerAdmin' : IDL.Func([], [IDL.Bool], ['query']),
-  'listEnquiries' : IDL.Func([], [IDL.Vec(Enquiry)], ['query']),
-  'saveCallerUserProfile' : IDL.Func([UserProfile], [], []),
-  'submitEnquiry' : IDL.Func(
-      [IDL.Text, IDL.Text, IDL.Text, IDL.Text, ServiceInterest],
-      [],
+  'getAllInquiries' : IDL.Func([], [IDL.Vec(Inquiry)], []),
+  'submitInquiry' : IDL.Func(
+      [IDL.Text, IDL.Text, IDL.Text, IDL.Text],
+      [IDL.Bool],
       [],
     ),
 });
@@ -58,49 +29,20 @@ export const idlService = IDL.Service({
 export const idlInitArgs = [];
 
 export const idlFactory = ({ IDL }) => {
-  const UserRole = IDL.Variant({
-    'admin' : IDL.Null,
-    'user' : IDL.Null,
-    'guest' : IDL.Null,
-  });
-  const UserProfile = IDL.Record({ 'name' : IDL.Text });
-  const ServiceInterest = IDL.Variant({
-    'sezServices' : IDL.Null,
-    'gstRelated' : IDL.Null,
-    'dgft' : IDL.Null,
-    'stpi' : IDL.Null,
-    'hundredPercentEOU' : IDL.Null,
-    'incomeTaxReturn' : IDL.Null,
-    'labourLawCompliances' : IDL.Null,
-    'general' : IDL.Null,
-    'payrollServices' : IDL.Null,
-  });
-  const Enquiry = IDL.Record({
-    'id' : IDL.Nat,
+  const Time = IDL.Int;
+  const Inquiry = IDL.Record({
     'name' : IDL.Text,
     'email' : IDL.Text,
-    'serviceInterest' : ServiceInterest,
     'message' : IDL.Text,
+    'timestamp' : Time,
     'phone' : IDL.Text,
   });
   
   return IDL.Service({
-    '_initializeAccessControlWithSecret' : IDL.Func([IDL.Text], [], []),
-    'assignCallerUserRole' : IDL.Func([IDL.Principal, UserRole], [], []),
-    'deleteEnquiry' : IDL.Func([IDL.Nat], [], []),
-    'getCallerUserProfile' : IDL.Func([], [IDL.Opt(UserProfile)], ['query']),
-    'getCallerUserRole' : IDL.Func([], [UserRole], ['query']),
-    'getUserProfile' : IDL.Func(
-        [IDL.Principal],
-        [IDL.Opt(UserProfile)],
-        ['query'],
-      ),
-    'isCallerAdmin' : IDL.Func([], [IDL.Bool], ['query']),
-    'listEnquiries' : IDL.Func([], [IDL.Vec(Enquiry)], ['query']),
-    'saveCallerUserProfile' : IDL.Func([UserProfile], [], []),
-    'submitEnquiry' : IDL.Func(
-        [IDL.Text, IDL.Text, IDL.Text, IDL.Text, ServiceInterest],
-        [],
+    'getAllInquiries' : IDL.Func([], [IDL.Vec(Inquiry)], []),
+    'submitInquiry' : IDL.Func(
+        [IDL.Text, IDL.Text, IDL.Text, IDL.Text],
+        [IDL.Bool],
         [],
       ),
   });

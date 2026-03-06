@@ -1,35 +1,52 @@
 # Elite Managed Services
 
 ## Current State
-New project. No existing code.
+New project — no existing pages or backend.
 
 ## Requested Changes (Diff)
 
 ### Add
-- Full multi-page marketing website for Elite Managed Services, a consultancy firm providing SEZ, STPI, 100% EOU, DGFT, GST, Income Tax, Payroll, and Labour Law services.
-- Navigation: Home, About (About Us, About SEZ, About STPI), Services (SEZ Services, STPI, 100% EOU, DGFT, GST Related, Individual Income Tax Return, Payroll Services, Labour Law Compliances), Contact Us
-- Hero section with rotating banner/carousel and headline about Elite Managed Services
-- Legislative Framework section covering SEZ Act 2005, SEZ Rules 2006, State SEZ Act & Policy
-- STPI Scheme section with description
-- "What is SEZ?" section with bullet points
-- Mission & Vision tabbed section
-- Services grid section showcasing all 8 services with icons/cards
-- Contact section with address, phone, email, and a contact form
-- Footer with quick links, services list, contact info, social links
-- Contact form backend: store enquiries submitted by visitors (name, email, phone, message, service interest)
-- Admin page to view submitted enquiries (protected by a simple passcode or admin login)
+- Full multi-section homepage inspired by vardhansez.com layout
+- Navigation bar: logo, Home, About, Services (dropdown), Contact Us
+- Hero slider section with tagline about Elite Managed Services
+- Services overview section with cards for all 7 services:
+  1. SEZ Services
+  2. STPI (Software Technology Parks of India)
+  3. 100% EOU (Export Oriented Units)
+  4. DGFT (Directorate General of Foreign Trade)
+  5. GST Related Services
+  6. Individual Income Tax Return
+  7. Payroll Services
+  8. Labour Law Compliances
+- About section: company overview, mission, vision for Elite Managed Services, Delhi NCR
+- Legislative/Framework section (SEZ Act 2005, SEZ Rules 2006, Foreign Trade Policy)
+- Contact Us section with:
+  - Name: Prem Kumar
+  - Mobile: 9910806694
+  - Email: prem.kumar@elites.co.in, info@elitemangedservices.co.in
+  - Website: www.elites.co.in
+  - Location: Delhi NCR
+- Contact inquiry form (name, email, phone, message, submit)
+- Footer with quick links, services list, contact info
+- Backend: store contact form submissions
 
 ### Modify
-- N/A
+- Nothing (new project)
 
 ### Remove
-- N/A
+- Nothing (new project)
 
 ## Implementation Plan
-1. Backend: Motoko canister storing contact form enquiries (submit enquiry, list enquiries for admin)
-2. Frontend pages: Home, About Us, About SEZ, About STPI, individual service detail pages, Contact, Admin
-3. Home page sections: Hero carousel, Legislative Framework, STPI, What is SEZ, Mission & Vision, Services grid, Client logos area
-4. Services: SEZ Approval/Management/Online, STPI Consultancy, 100% EOU, DGFT, GST, Income Tax Return, Payroll Services, Labour Law Compliances
-5. Contact form wired to backend canister
-6. Admin page to list enquiries
-7. Navigation with dropdown menus for About and Services
+1. Rename project to "elite-managed-services"
+2. Generate logo image for Elite Managed Services
+3. Generate hero banner images
+4. Generate Motoko backend to store contact form inquiries
+5. Build React frontend:
+   - Sticky navbar with dropdown menus
+   - Hero section with animated text
+   - Services cards grid (8 services)
+   - About / Mission / Vision tabs
+   - Legislative framework cards
+   - Contact form wired to backend
+   - Footer with all info
+6. Deploy

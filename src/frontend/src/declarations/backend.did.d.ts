@@ -10,41 +10,17 @@ import type { ActorMethod } from '@icp-sdk/core/agent';
 import type { IDL } from '@icp-sdk/core/candid';
 import type { Principal } from '@icp-sdk/core/principal';
 
-export interface Enquiry {
-  'id' : bigint,
+export interface Inquiry {
   'name' : string,
   'email' : string,
-  'serviceInterest' : ServiceInterest,
   'message' : string,
+  'timestamp' : Time,
   'phone' : string,
 }
-export type ServiceInterest = { 'sezServices' : null } |
-  { 'gstRelated' : null } |
-  { 'dgft' : null } |
-  { 'stpi' : null } |
-  { 'hundredPercentEOU' : null } |
-  { 'incomeTaxReturn' : null } |
-  { 'labourLawCompliances' : null } |
-  { 'general' : null } |
-  { 'payrollServices' : null };
-export interface UserProfile { 'name' : string }
-export type UserRole = { 'admin' : null } |
-  { 'user' : null } |
-  { 'guest' : null };
+export type Time = bigint;
 export interface _SERVICE {
-  '_initializeAccessControlWithSecret' : ActorMethod<[string], undefined>,
-  'assignCallerUserRole' : ActorMethod<[Principal, UserRole], undefined>,
-  'deleteEnquiry' : ActorMethod<[bigint], undefined>,
-  'getCallerUserProfile' : ActorMethod<[], [] | [UserProfile]>,
-  'getCallerUserRole' : ActorMethod<[], UserRole>,
-  'getUserProfile' : ActorMethod<[Principal], [] | [UserProfile]>,
-  'isCallerAdmin' : ActorMethod<[], boolean>,
-  'listEnquiries' : ActorMethod<[], Array<Enquiry>>,
-  'saveCallerUserProfile' : ActorMethod<[UserProfile], undefined>,
-  'submitEnquiry' : ActorMethod<
-    [string, string, string, string, ServiceInterest],
-    undefined
-  >,
+  'getAllInquiries' : ActorMethod<[], Array<Inquiry>>,
+  'submitInquiry' : ActorMethod<[string, string, string, string], boolean>,
 }
 export declare const idlService: IDL.ServiceClass;
 export declare const idlInitArgs: IDL.Type[];
