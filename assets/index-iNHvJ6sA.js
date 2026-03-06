@@ -52135,17 +52135,17 @@ function TabsContent({
 }
 const heroSlides = [
   {
-    image: "/assets/generated/hero-banner.dim_1200x480.jpg",
+    image: "assets/generated/hero-banner.dim_1200x480.jpg",
     headline: "Your Trusted Partner for SEZ & Compliance Services",
     sub: "Expert advisory and end-to-end compliance solutions for businesses across India."
   },
   {
-    image: "/assets/generated/hero-sez.dim_1200x480.jpg",
+    image: "assets/generated/hero-sez.dim_1200x480.jpg",
     headline: "Expert SEZ Approval & Management Services",
     sub: "Navigate the Special Economic Zone framework with ease and confidence."
   },
   {
-    image: "/assets/generated/hero-compliance.dim_1200x480.jpg",
+    image: "assets/generated/hero-compliance.dim_1200x480.jpg",
     headline: "GST, Income Tax, Payroll & Labour Law Experts",
     sub: "Comprehensive compliance management so you can focus on growing your business."
   }
