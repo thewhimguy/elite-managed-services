@@ -60,7 +60,7 @@ export function Navbar() {
           className="flex items-center gap-2 shrink-0"
         >
           <img
-            src="/assets/generated/logo-transparent.dim_300x80.png"
+            src={assetPath('assets/generated/logo-transparent.dim_300x80.png')}
             alt="Elite Managed Services"
             className="h-10 w-auto object-contain"
           />
