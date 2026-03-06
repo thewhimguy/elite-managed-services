@@ -1,11 +1,12 @@
 import { ServicePage } from "./ServicePage";
+import { assetPath } from "@/utils/paths";
 
 export function DgftServicesPage() {
   return (
     <ServicePage
       title="DGFT Services"
       subtitle="Directorate General of Foreign Trade licensing, registration and compliance solutions."
-      bgImage="/assets/generated/hero-compliance.dim_1200x480.jpg"
+      bgImage={assetPath("assets/generated/hero-compliance.dim_1200x480.jpg")}
       description={
         <>
           <p>

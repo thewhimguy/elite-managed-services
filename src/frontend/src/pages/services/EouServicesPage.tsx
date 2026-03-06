@@ -1,11 +1,12 @@
 import { ServicePage } from "./ServicePage";
+import { assetPath } from "@/utils/paths";
 
 export function EouServicesPage() {
   return (
     <ServicePage
       title="100% EOU Services"
       subtitle="Export Oriented Unit setup, approvals and compliance management across India."
-      bgImage="/assets/generated/hero-banner.dim_1200x480.jpg"
+      bgImage={assetPath("assets/generated/hero-banner.dim_1200x480.jpg")}
       description={
         <>
           <p>

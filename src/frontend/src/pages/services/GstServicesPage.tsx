@@ -1,11 +1,12 @@
 import { ServicePage } from "./ServicePage";
+import { assetPath } from "@/utils/paths";
 
 export function GstServicesPage() {
   return (
     <ServicePage
       title="GST Related Services"
       subtitle="Complete Goods and Services Tax compliance, advisory and dispute resolution services."
-      bgImage="/assets/generated/hero-compliance.dim_1200x480.jpg"
+      bgImage={assetPath("assets/generated/hero-compliance.dim_1200x480.jpg")}
       description={
         <>
           <p>
