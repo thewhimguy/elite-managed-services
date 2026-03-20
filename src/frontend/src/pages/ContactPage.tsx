@@ -16,6 +16,7 @@ import { useState } from "react";
 import { toast } from "sonner";
 import { ServiceInterest } from "../backend.d";
 import { useSubmitEnquiry } from "../hooks/useQueries";
+import { assetPath } from "@/utils/paths";
 
 const serviceOptions = [
   { value: ServiceInterest.sezServices, label: "SEZ Services" },
@@ -87,7 +88,7 @@ export function ContactPage() {
       <PageHero
         title="Contact Us"
         subtitle="Reach out to our team for a free consultation on your compliance needs."
-        bgImage="/assets/generated/hero-banner.dim_1200x480.jpg"
+        bgImage={assetPath("assets/generated/hero-banner.dim_1200x480.jpg")}
       />
 
       <section className="py-16 bg-white">

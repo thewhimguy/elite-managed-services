@@ -1,11 +1,12 @@
 import { ServicePage } from "./ServicePage";
+import { assetPath } from "@/utils/paths";
 
 export function LabourLawPage() {
   return (
     <ServicePage
       title="Labour Law Compliances"
       subtitle="Comprehensive labour law audit, registration and statutory compliance services across India."
-      bgImage="/assets/generated/hero-banner.dim_1200x480.jpg"
+      bgImage={assetPath("assets/generated/hero-banner.dim_1200x480.jpg")}
       description={
         <>
           <p>

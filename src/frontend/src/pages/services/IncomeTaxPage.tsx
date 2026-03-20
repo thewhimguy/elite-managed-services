@@ -1,11 +1,12 @@
 import { ServicePage } from "./ServicePage";
+import { assetPath } from "@/utils/paths";
 
 export function IncomeTaxPage() {
   return (
     <ServicePage
       title="Individual Income Tax Return"
       subtitle="Accurate, timely and hassle-free income tax return filing for salaried, business and professional individuals."
-      bgImage="/assets/generated/hero-compliance.dim_1200x480.jpg"
+      bgImage={assetPath("assets/generated/hero-compliance.dim_1200x480.jpg")}
       description={
         <>
           <p>

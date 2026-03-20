@@ -2,6 +2,7 @@ import { PageHero } from "@/components/PageHero";
 import { Card, CardContent } from "@/components/ui/card";
 import { Award, Briefcase, Shield, Users } from "lucide-react";
 import { motion } from "motion/react";
+import { assetPath } from "@/utils/paths";
 
 const values = [
   {
@@ -32,7 +33,7 @@ export function AboutUsPage() {
       <PageHero
         title="About Us"
         subtitle="Learn about our team, values and commitment to your compliance success."
-        bgImage="/assets/generated/hero-banner.dim_1200x480.jpg"
+        bgImage={assetPath("assets/generated/hero-banner.dim_1200x480.jpg")}
       />
 
       {/* Company Description */}
